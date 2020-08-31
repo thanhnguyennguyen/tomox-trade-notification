@@ -1,0 +1,34 @@
+{
+  "name": "tomox-trade-notification",
+  "version": "1.0.0",
+  "description": "notify when new trades happen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhnguyennguyen/tomox-trade-notification.git"
+  },
+  "keywords": [
+    "tomox",
+    "trade",
+    "notification",
+    "telegram",
+    "slack"
+  ],
+  "author": "NguyenNguyen (nguyenbk92@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhnguyennguyen/tomox-trade-notification/issues"
+  },
+  "homepage": "https://github.com/thanhnguyennguyen/tomox-trade-notification#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "get-json": "^1.0.1",
+    "noti_bot": "^1.0.1",
+    "sha3": "^2.1.2",
+    "web3": "^1.2.8"
+  }
+}
