@@ -20,10 +20,8 @@ const main = async () => {
                 for (trade of response.items) {
                     let updatedAt = parseInt(Date.parse(trade.updatedAt) / 1000) //  seconds
                     if (updatedAt + parseInt(process.env.GAP_TIME) > now) {
-                        // FIXME: we use this script when we have orders in orderbook and wait for matching
-                        // assume you are always a maker
                         let side = 'BUY'
-                        if (trade.takerOrderSide == 'BUY') {
+                        if ((trade.takerOrderSide == 'SELL' && trade.taker == addr) || (trade.takerOrderSide == 'BUY' && trade.maker == addr)) {
                             side = 'SELL'
                         }
                         trades.push('(' + trade.pairName + ') ' + side + ' ' + trade.amount + ' at price ' + trade.pricepoint)
