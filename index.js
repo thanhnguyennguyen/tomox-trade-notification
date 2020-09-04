@@ -25,7 +25,10 @@ const main = async () => {
                             side = 'SELL'
                         }
                         trades.push('(' + trade.pairName + ') ' + side + ' ' + trade.amount + ' at price ' + trade.pricepoint)
-                    }
+                    } else {
+			// trades are sorted by updatedAt, so no need to check older trades
+		    	break
+		    }
                 }
             }
         })
