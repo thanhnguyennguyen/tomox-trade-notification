@@ -35,7 +35,7 @@ const main = async () => {
 
         let msg = ''
         if (trades.length > 0) {
-            msg = "You have new trades \n" + trades.toString().split(",").join("\n\n")
+            msg = "You have new trades \n" + trades.toString().split(",").reverse().join("\n\n")
 
 
         }
